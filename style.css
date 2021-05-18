@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: lightgrey;
+}
+#root{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-self: center;
+}
+img{
+    width:800px;
+    height: 400px;
+    object-fit: cover;
+    margin: 130px auto;
+    border-radius: 35px 0 35px 0;
+}
+.prev, .next{
+    font-size: 3rem;
+    align-self: center;
+}
+#pallini{
+    display: flex;
+    flex-direction: row;
+    width:150px;
+    height:30px;
+    background-color: #151111;
+    position: absolute;
+    bottom: 150px;
+    opacity: 0.5;
+    border-radius: 30px;
+}
+#pallini ul li{
+    flex-direction: row;
+    font-size: 40px;
+}
+.container{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-self: center;
+    position:relative;
+}
