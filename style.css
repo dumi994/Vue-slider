@@ -25,14 +25,24 @@ img{
 }
 #pallini{
     display: flex;
-    flex-direction: row;
-    width:150px;
+    justify-content: space-between;
     height:30px;
     background-color: #151111;
     position: absolute;
     bottom: 150px;
     opacity: 0.5;
     border-radius: 30px;
+}
+.pallino{
+    width:15px;
+    height:15px;
+    background-color: white;
+    flex-direction: row;
+    margin: 10px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50%;
+    align-self: center;
 }
 #pallini ul li{
     flex-direction: row;
