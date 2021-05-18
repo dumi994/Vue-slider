@@ -18,11 +18,12 @@ const app = new Vue ({
         //contatore
         counter: 0,
         images: [
-            "http://www.esa.int/var/esa/storage/images/esa_multimedia/images/2020/04/mars_landscape/21916769-2-eng-GB/Mars_landscape_pillars.jpg",
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/NASA_Mars_Rover.jpg/310px-NASA_Mars_Rover.jpg",
+            "https://daily.jstor.org/wp-content/uploads/2021/02/why_hasnt_nasa_sent_anyone_to_mars_1050x700.jpg",
+            "https://advancedtech.airliquide.com/sites/abt_at/files/styles/800x625/public/2016/12/06/mars-short-read-overlay1.jpg?itok=tZPadBNH",
             "http://www.esa.int/var/esa/storage/images/esa_multimedia/images/2006/10/residual_water_ice_in_vastitas_borealis_crater/9810168-3-eng-GB/Residual_water_ice_in_Vastitas_Borealis_Crater_pillars.jpg",
             "http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcQ-mPuUb4I_AYrFVlgVH1Osc3YIlwHX_KgYaFzSChB9DFOU2PBoReHGyN-1MOS11mV0RfnWsPzytJ1pd9WSxqo",
-        ]
+        ],
+
         
     },
     methods:{
@@ -33,19 +34,32 @@ const app = new Vue ({
                 return this.counter = this.images.length - 1;
             }
             return this.counter -= 1;
-
+            
         },
         //funzione che manda avanti il contatore
         next () {
             console.log("cliccato su next");
-            if (this.counter > this.images.length -1){
+            if (this.counter === this.images.length -1){
                 return this.counter = 0;
             }
             return this.counter +=1;
 
+        },
+        checkCirc(index){
+            return this.counter = index;
         }
+          
     },
-    /* mounted(){
-    
-    } */
+    mounted() {
+        document.addEventListener('keyup', (e) =>{
+        console.log(e.key);
+        if(e.key === 'ArrowLeft'){
+        this.prev()
+        }
+        if (e.key === "ArrowRight"){
+            this.next()
+        }
+
+        })
+        }
 })

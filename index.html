@@ -11,7 +11,7 @@
 <body>
     
     <div id="root">
-        <div class="container" @keyup.left="prev" @keyup.right="next">
+        <div class="container">
 
             <div class="prev" @click="prev">
                 <i class="fas fa-chevron-left"></i>
@@ -22,10 +22,7 @@
                 <i class="fas fa-chevron-right"></i>
             </div>
              <div id="pallini">
-                <div class="pallino"></div>
-                <div class="pallino"></div>
-                <div class="pallino"></div>
-                <div class="pallino"></div>
+                <div v-for="(image, index) in images" @click="checkCirc(index)" class="pallino" :class="(index == counter)? 'active':''"></div>
             </div>
         </div>
        
