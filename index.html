@@ -11,23 +11,22 @@
 <body>
     
     <div id="root">
-        <div class="container">
+        <div class="container" @keyup.left="prev" @keyup.right="next">
 
-             <div class="prev" @click="prev">
-            <i class="fas fa-chevron-left"></i>
-        </div>
-        <img :src="images[counter]" alt="">
+            <div class="prev" @click="prev">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <img :src="images[counter]" alt="">
 
-        <div class="next" @click="next">
-            <i class="fas fa-chevron-right"></i>
-        </div>
-        <div id="pallini">
-            <div class="pallino"></div>
-            <div class="pallino"></div>
-            <div class="pallino"></div>
-            <div class="pallino"></div>
-
-        </div>
+            <div class="next" @click="next">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+             <div id="pallini">
+                <div class="pallino"></div>
+                <div class="pallino"></div>
+                <div class="pallino"></div>
+                <div class="pallino"></div>
+            </div>
         </div>
        
     </div>
